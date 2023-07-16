@@ -54,7 +54,7 @@ const SearchBooks = () => {
       const { data } = await saveBookMutation({
         variables: { input: bookToSave },
       });
-
+      console.log('Saved book data:', data);
       setSavedBooks([...savedBooks, data.saveBook]);
     } catch (err) {
       console.error(err);
